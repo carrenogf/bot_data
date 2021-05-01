@@ -1,1 +1,1 @@
-worker: python qr_bot.py
+worker: python ticker-bot.py
