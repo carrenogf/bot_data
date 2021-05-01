@@ -62,8 +62,8 @@ def input_text(update,context):
 	return ConversationHandler.END
 
 if __name__ == '__main__':
-
-	updater = Updater(token='1719260461:AAE9fc1u7aVNJ605Zl8uAZSUypetJnultss', use_context=True)
+	TOKEN = os.getenv("TOKEN")
+	updater = Updater(token=TOKEN, use_context=True)
 
 	dp = updater.dispatcher
 
