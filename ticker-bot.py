@@ -25,7 +25,10 @@ def ticker_callback_handler(update,context):
 
 def input_text(update,context):
     text = update.message.text
-    resultado = quote(text)
+    try:
+	resultado = quote(text)
+    except:
+	resultado = "Tiker no encontado, pruebe nuevamente"
     update.message.reply_text(resultado,reply_markup= InlineKeyboardMarkup([
 			[InlineKeyboardButton(text='Consultar ticker', callback_data='ticker')]
 			]))
